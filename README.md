@@ -1,9 +1,7 @@
 AliceFixturesBundle
 ===================
 
-[![](https://gist.githubusercontent.com/h4cc/c5ac3cd17ec637c822c7927814ab1c6d/raw/b1d14b193d6173cf37723dddef1490caedbf48f3/new-maintainer.png)](https://twitter.com/h4cc)
-
-A Symfony2 bundle for flexible usage of [nelmio/alice](https://github.com/nelmio/alice) and [fzaninotto/Faker](https://github.com/fzaninotto/Faker) in Symfony2.
+A Symfony2 bundle for flexible usage of [nelmio/alice](https://github.com/nelmio/alice) and [fzaninotto/Faker](https://github.com/fzaninotto/Faker) in Symfony2, updated for Symfony3.
 
 [![Build Status](https://travis-ci.org/h4cc/AliceFixturesBundle.svg?branch=master)](https://travis-ci.org/h4cc/AliceFixturesBundle)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/h4cc/AliceFixturesBundle/badges/quality-score.png?s=2f90c394022338ad406685a575f6ac7ebcde2a2e)](https://scrutinizer-ci.com/g/h4cc/AliceFixturesBundle/)
@@ -33,13 +31,18 @@ This means _all_ tables managed by Doctrine will be dropped and recreated. A dat
 
 ## Installation
 
-Simply require the bundle by its name with composer:
-
-```bash
-$ php composer.phar require h4cc/alice-fixtures-bundle
+Edit your `composer.json` file to add the repository.
 ```
-Follow the 'dev-master' branch for latest dev version. But i recommend to use more stable version tags if available.
-
+ "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Demoboy/AliceFixturesBundle"
+        }
+    ],
+    
+ ```
+ And then require via:
+ `php composer.phar require h4cc/alice-fixtures-bundle`
 
 After that, add the Bundle to your Kernel, most likely in the "dev" or "test" environment.
 
@@ -238,6 +241,7 @@ When using multiple bundles like `MyCommonBundle` and `MyUserBundle`, there are 
 
 ## Demo Application
 
+**Note: This demo is outdated, but is great reference, though I'd just look at Alice's documentation**
 There is a Demo Application showing some ways to use this bundle: https://github.com/h4cc/AliceDemo
 
 Feel free to add some more demos if you like.
